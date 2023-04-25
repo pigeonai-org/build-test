@@ -1,0 +1,31 @@
+name: build envs
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest ]
+        pyversion: ["3.11"]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: setup mamba
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        python-version: ${{ matrix.pyversion }}
+        auto-update-conda: true
+        channels: conda-forge, defaults
+        channel-priority: true
+        mamba-version: "*"
+        activate-environment: test
+    - name: install dependencies
+      run: |
+        mamba install -n test -c conda-forge openai pytube
+    - name: install whisper
+      shell: bash -l {0}
+      run: |
+        pip install git+https://github.com/openai/whisper.git
