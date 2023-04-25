@@ -24,7 +24,7 @@ jobs:
     - name: install dependencies
       run: |
         mamba install -n test -c conda-forge openai pytube
-    - name: build disk file MacOS
-        shell: bash -l {0}
-        run: |
-          pip install git+https://github.com/openai/whisper.git
+    - name: install whisper
+      shell: bash -l {0}
+      run: |
+        pip install git+https://github.com/openai/whisper.git
