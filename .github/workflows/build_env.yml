@@ -7,8 +7,8 @@ on:
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
-        fail-fast: false
         os: [ ubuntu-latest ]
         pyversion: ["3.8", "3.9", "3.10", "3.11"]
     runs-on: ${{ matrix.os }}
