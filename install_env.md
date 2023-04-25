@@ -1,0 +1,5 @@
+| OS | 3.8 | 3.9 | 3.10 | 3.11 |
+| -------- | -------- | -------- | -------- | -------- |
+| Ubuntu-latest | [![build](https://github.com/project-kxkg/build-test/actions/workflows/build-env-ubuntu-3.8.yml/badge.svg)](https://github.com/project-kxkg/build-test/actions/workflows/build-env-ubuntu-3.8.yml) | [![build](https://github.com/project-kxkg/build-test/actions/workflows/build-env-ubuntu-3.9.yml/badge.svg)](https://github.com/project-kxkg/build-test/actions/workflows/build-env-ubuntu-3.9.yml) | [![build](https://github.com/project-kxkg/build-test/actions/workflows/build-env-ubuntu-3.10.yml/badge.svg)](https://github.com/project-kxkg/build-test/actions/workflows/build-env-ubuntu-3.10.yml) | [![build](https://github.com/project-kxkg/build-test/actions/workflows/build-env-ubuntu-3.11.yml/badge.svg)](https://github.com/project-kxkg/build-test/actions/workflows/build-env-ubuntu-3.11.yml) |
+| MacOS-latest | Row 2, Column 2 | Row 2, Column 3 | Row 2, Column 4 | Row 2, Column 5 |
+| Windows-latest | Row 3, Column 2 | Row 3, Column 3 | Row 3, Column 4 | Row 3, Column 5 |
