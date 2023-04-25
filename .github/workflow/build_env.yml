@@ -1,14 +1,15 @@
 name: build envs
 
 on:
-  push
+  push:
+    branches: main
 
 jobs:
   build:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        python-version: [3.8, 3.9, 3.10, 3.11]
+        pyversion: [3.8, 3.9, 3.10, 3.11]
     runs-on: ${{matrix.os}}
     steps:
     - name: setup mamba
@@ -21,7 +22,7 @@ jobs:
         activate-environment: test
     - name: install dependencies
       run: |
-        mamba install -n test -c conda-forge openai pytube python=${{matrix.python-version}}
+        mamba install -n test -c conda-forge openai pytube python=${{matrix.pyversion}}
     - name: build disk file MacOS
         shell: bash -l {0}
         run: |
